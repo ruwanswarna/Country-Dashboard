@@ -1,19 +1,13 @@
-export const getPublicIP = function () {
-	let url;
-	if (ip.includes(".")) url = `https://ipv4.seeip.org/jsonip`;
-	else if (ip.includes(":")) url = "https://ipv6.seeip.org/jsonip";
-	else {
-	}
 
-	fetch(url)
-		.then((res) => res.jason())
-		.then((data) => {
-			console.log(data);
-			return data.ip;
-		});
-};
-export const getLocationByIP = function (ip) {
-	fetch(`http://ip-api.com/json/${ip}`)
-		.then((res) => res.jason())
-		.then((data) => console.log(data));
+export const getLocationByIP = async function () {
+	let url = `https://ipv4.seeip.org/jsonip`;
+
+	const res1 = await fetch(url);
+	const { ip } = await res1.json();
+	console.log(ip);
+	const res2 = await fetch(`http://ip-api.com/json/${ip}`);
+	const data = await res2.json();
+	console.log(data);
+	const { city, country, query } = data;
+	return { city, country, query };
 };
