@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>Country Dashboard</title>
+		<link rel="stylesheet" href="src/styles.css" />
+		<!-- Leaflet CSS for map (optional) -->
+		<link
+			rel="stylesheet"
+			href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+			integrity=""
+			crossorigin=""
+		/>
+	</head>
+	<body>
+		<header class="site-header">
+			<div class="logo">
+				<img src="https://i.ibb.co/ym70fKHt/globe-stand-17721011.png" />
+			</div>
+			<div class="heading"><h1>Country Dashboard</h1></div>
+			<div class="ip-location">
+                <p>IP Adderss: 
+                    <br>Device location: </p>
+                </div>
+		</header>
+		<div class="controls">
+			<input id="input-country" type="text" placeholder="country name" />
+			<input id="input-capital" type="text" placeholder="capital city" />
+			<button id="button-search">Search</button>
+			<button id="button-locate">Use device location</button>
+		</div>
+
+		<main class="container">
+			<section id="country-data" class="card">
+				<h2 id="countryName">—</h2>
+				<div id="flagWrap">
+					<img id="flag" src="/assets/placeholder.png" alt="flag" />
+				</div>
+				<p id="basicInfo"></p>
+				<div id="meta"></div>
+			</section>
+
+			<section id="map" class="card">
+				<h3>Map</h3>
+				<div id="mapView" style="height: 300px"></div>
+			</section>
+
+			<section id="extras" class="card">
+				<h3>Extras</h3>
+				<div id="weather"></div>
+				<div id="ipInfo"></div>
+				<div id="llmDesc"></div>
+			</section>
+		</main>
+
+		<footer class="footer">
+			<!-- Starter project • Add your API keys in <code>src/llm.js</code> and -->
+			<!-- <code>src/api.js</code> -->
+		</footer>
+
+		<script
+			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+			integrity=""
+			crossorigin=""
+		></script>
+		<script type="module" src="src/script.js"></script>
+	</body>
+</html>

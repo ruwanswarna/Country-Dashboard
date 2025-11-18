@@ -1,0 +1,93 @@
+:root {
+	--bg: #f6f7fb;
+	--card: #ffffff;
+	--muted: #666;
+}
+* {
+	box-sizing: border-box;
+}
+body {
+	font-family: Inter, system-ui, Arial;
+	margin: 0;
+	background: var(--bg);
+	color: #111;
+}
+
+.site-header {
+	display: flex;
+	align-items: center;
+	padding: 5px 5px 0 5px;
+	background: linear-gradient(90deg, #fff, #285a9c);
+	box-shadow: 0 2px 0 #00f;
+}
+.logo {
+	padding-left: 0px;
+	padding-right: 10px;
+}
+.logo img {
+	width: 50px;
+}
+.heading h1 {
+	color: #852626;
+	font-size: 20pt;
+	font-weight: 700;
+	margin: 0;
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.ip-location {
+	margin-left: auto;
+}
+.ip-location p {
+	font-family: "Inter", Arial, Helvetica, sans-serif;
+}
+.controls {
+	margin: 10px 0 0 10px;
+}
+.controls input {
+	padding: 5px;
+	border-radius: 6px;
+	border: 2px solid #ddd;
+	transition: border 0.3s;
+}
+.controls input:focus {
+	border-color: #852626;
+	outline: none;
+}
+.controls button {
+	margin-left: 0;
+	padding: 5px;
+	border-radius: 6px;
+	border: 2px solid #ddd;
+	background: #fff;
+	transition: background-color 0.2s;
+}
+.controls button:active {
+	background-color: #718091;
+}
+.container {
+	display: grid;
+	grid-template-columns: 1fr 360px;
+	gap: 10px;
+	padding: 10px 10px;
+}
+.card {
+	background: #fff;
+	padding: 1rem;
+	border-radius: 10px;
+	box-shadow: 0 6px 18px rgba(20, 20, 50, 0.05);
+}
+#flag {
+	max-width: 200px;
+	border: 1px solid #eee;
+}
+.footer {
+	text-align: center;
+	padding: 1rem;
+	color: var(--muted);
+	font-size: 0.9rem;
+}
+@media (max-width: 900px) {
+	.container {
+		grid-template-columns: 1fr;
+	}
+}
