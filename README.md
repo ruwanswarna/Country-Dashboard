@@ -27,6 +27,9 @@ user's public IP and provides location-based data.
 -   Fetches introductory paragraph for each country using the Wikipedia
     API
 ------------------------------------------------------------------------
+## 🌐 Live Demo On Netlify
+https://country-dashboard-anusha.netlify.app/
+------------------------------------------------------------------------
 ## UI
 ![country dashboard UI](assets/country-dashboard-UI.png)  
 ------------------------------------------------------------------------
@@ -66,11 +69,6 @@ user's public IP and provides location-based data.
 4.  Wikipedia API provides intro text\
 5.  Leaflet map centers and zooms dynamically\
 6.  User's IP-based location is detected automatically
-------------------------------------------------------------------------
-
-## 🌐 Live Demo On Netlify
-https://country-dashboard-anusha.netlify.app/
-
 ------------------------------------------------------------------------
 
 ## 🛠️ Setup Instructions
