@@ -46,8 +46,14 @@ user's public IP and provides location-based data.
     │── style.css
     │── script.js
     │── /assets
-    │── /components
-    │── /modules
+        |── placeholder.png
+    │── /src
+        |── script.js
+        │── style.css
+        │── weatherAPI.js
+        │── wikipediaAPI.js
+        │── restCountriesAPI.js
+        │── ipToLocation.js
 
 ------------------------------------------------------------------------
 
