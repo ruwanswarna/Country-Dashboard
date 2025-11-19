@@ -4,7 +4,8 @@ import {
 } from "./restCountriesAPI.js";
 import { getLocationByIP } from "./ipToLocationAPI.js";
 import { getWikiTextIntro } from "./wikipediaAPI.js";
-import { getMapDataAndRender } from "./mapAPI.js";
+import { getMapDataAndRender } from "./map.js";
+import { getWeatherAndRender } from "./weatherAPI.js";
 
 const inputCountryEl = document.getElementById("input-country");
 const inputCapitalEl = document.getElementById("input-capital");
@@ -59,12 +60,10 @@ const updateUI = async function (name, searchType, city, ipAddress) {
 			[countryData] = await getCountryDataByName(name);
 		}
 		const textIntro = await getWikiTextIntro(name);
-		const { latlng, cca3, borders } = countryData;
-		const countryName = countryData.name.common;
 		console.log(countryData);
-		console.log(latlng, cca3, borders);
 		renderCountry(countryData, textIntro);
-		getMapDataAndRender(latlng, countryName, cca3, borders);
+		getMapDataAndRender(countryData);
+		getWeatherAndRender(countryData);
 	} catch (err) {
 		console.error(err);
 	}
