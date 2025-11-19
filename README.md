@@ -28,7 +28,7 @@ user's public IP and provides location-based data.
     API
 ------------------------------------------------------------------------
 ## UI
-![country dashboard UI](README_content/whitefly_stages.jpg)  
+![country dashboard UI](assets/country-dashboard-UI.png)  
 ------------------------------------------------------------------------
 ## 🧰 Tech Stack
 -   **HTML**
