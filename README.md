@@ -27,7 +27,9 @@ user's public IP and provides location-based data.
 -   Fetches introductory paragraph for each country using the Wikipedia
     API
 ------------------------------------------------------------------------
-
+## UI
+![country dashboard UI](README_content/whitefly_stages.jpg)  
+------------------------------------------------------------------------
 ## 🧰 Tech Stack
 -   **HTML**
 -   **CSS**
