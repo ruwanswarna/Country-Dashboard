@@ -11,9 +11,19 @@ export const getWikiTextIntro = async function (query) {
 			origin: "*",
 		});
 
-	const res = await fetch(url);
-	const data = await res.json();
-	const page = Object.values(data.query.pages)[0];
-	console.log(page.extract);
-	return page.extract;
+	try {
+		const res = await fetch(url);
+		const data = await res.json();
+		const page = Object.values(data.query.pages)[0];
+
+		// Split extract into paragraphs based on \n
+		const paragraphs = page.extract
+			.split("\n")
+			.map((p) => p.trim())
+			.filter((p) => p !== "")
+			.map((p) => `<p>${p}<p>`);
+		return paragraphs;
+	} catch (err) {
+		throw err;
+	}
 };

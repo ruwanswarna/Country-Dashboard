@@ -14,8 +14,8 @@ body {
 	background: var(--bg);
 	color: #111;
 }
-p{
-    font-size: 9pt;
+p {
+	font-size: 9pt;
 }
 .site-header {
 	display: flex;
@@ -43,6 +43,8 @@ p{
 }
 .ip-location p {
 	font-family: "Inter", Arial, Helvetica, sans-serif;
+	font-size: 12pt;
+	color: #852626;
 }
 .controls {
 	margin: 10px 0 0 10px;
@@ -73,6 +75,8 @@ p{
 	grid-template-columns: 1fr 460px;
 	gap: 10px;
 	padding: 10px 10px;
+	opacity: 0;
+	transition: opacity 1s;
 }
 .card {
 	background: #fff;
@@ -91,7 +95,9 @@ p{
 }
 .col-right {
 	flex: 1;
-
+}
+.col-right p {
+	text-align: justify;
 }
 
 #flag {

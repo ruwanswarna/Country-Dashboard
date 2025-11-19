@@ -5,6 +5,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<title>Country Dashboard</title>
 		<link rel="stylesheet" href="src/styles.css" />
+		<link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
 		<!-- Leaflet CSS for map (optional) -->
 		<link
 			rel="stylesheet"
@@ -20,7 +21,7 @@
 			</div>
 			<div class="heading"><h1>Country Dashboard</h1></div>
 			<div class="ip-location">
-				<p>IP Adderss: <br />Device location:</p>
+				<!-- <p>IP Adderss: <br />Device location:</p> -->
 			</div>
 		</header>
 		<div class="controls">
@@ -33,11 +34,11 @@
 		<main class="container">
 			<section id="country-data" class="card">
 				<div class="col-left">
-					<h2 id="countryName">—</h2>
+					<h2 id="countryName"></h2>
 					<div id="flagWrap">
 						<img id="flag" src="/assets/placeholder.png" alt="flag" />
 					</div>
-					<p>dfgg</p>
+					<p></p>
 				</div>
 				<div class="col-right">
 					<p id="basicInfo"></p>
@@ -47,7 +48,7 @@
 
 			<section id="map" class="card">
 				<h3>Map</h3>
-				<div id="mapView" style="height: 300px"></div>
+				<div id="mapView" style="height: 450px"></div>
 			</section>
 
 			<section id="extras" class="card">
@@ -63,11 +64,7 @@
 			<!-- <code>src/api.js</code> -->
 		</footer>
 
-		<script
-			src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
-			integrity=""
-			crossorigin=""
-		></script>
+		<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 		<script type="module" src="src/script.js"></script>
 	</body>
 </html>
